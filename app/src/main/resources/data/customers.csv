@@ -1,0 +1,3 @@
+type,name,password,balance,payment,pin
+Customer,guest,guest123,100000.00,QRIS,123456
+Customer,wahyu,wahyu123,500000.00,CASH,123456

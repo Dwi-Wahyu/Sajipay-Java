@@ -1,0 +1,2 @@
+type,id,name,description,price,cost,stock,calories,isVegetarian,isIced,size,sugarLevel
+Food,F001,Burger,Delicious burger,25000.00,20000.00,8,500,true,,,

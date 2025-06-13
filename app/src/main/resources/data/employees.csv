@@ -1,0 +1,3 @@
+type,name,password,role,yearsOfExperience,salary
+Employee,chef,chef123,CHEF,5,5000000.00
+Employee,manager,manager123,MANAGER,5,5000000.00
