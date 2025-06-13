@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox stylesheets="@../css/avatar.css" fx:id="mainLayout" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="400.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom, #f0f4f8, #d9e2ec);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sajipay.controllers.ProfileController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label style="-fx-text-fill: #2c3e50;" text="User Profile">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        
+        <GridPane fx:id="detailsGrid" hgap="10.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+        </GridPane>
+        
+        <VBox fx:id="customerActionsVBox" alignment="CENTER_LEFT" managed="false" spacing="10.0" visible="false">
+            <children>
+                <Label text="Top-up Balance">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <TextField fx:id="topUpField" promptText="Enter amount" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="topUpButton" onAction="#handleTopUpButtonAction" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" text="Top-up" />
+                    </children>
+                </HBox>
+            </children>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </VBox>
+        
+        <Button fx:id="historyButton" onAction="#handleHistoryButtonAction" style="-fx-background-color: #8e44ad; -fx-text-fill: white; -fx-font-weight: bold;" text="View Order History" maxWidth="1.7976931348623157E308" managed="false" visible="false"/>
+
+        <HBox alignment="CENTER" spacing="15.0">
+            <children>
+                <Button fx:id="backButton" onAction="#handleBackButtonAction" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold;" text="Back" />
+                <Button fx:id="logoutButton" onAction="#handleLogoutButtonAction" style="-fx-background-color: #c0392b; -fx-text-fill: white;" text="Logout" />
+            </children>
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

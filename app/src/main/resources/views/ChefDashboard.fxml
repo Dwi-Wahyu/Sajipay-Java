@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sajipay.controllers.ChefDashboardController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label style="-fx-text-fill: white;" text="Chef Dashboard">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <children>
+                <Label fx:id="welcomeLabel" style="-fx-font-size: 16px; -fx-text-fill: #ecf0f1;" text="Welcome, Chef" HBox.hgrow="ALWAYS" />
+                <Button onAction="#handleProfileButton" text="Profil" />
+                <Button onAction="#handleLogoutButton" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Logout" />
+            </children>
+        </HBox>
+        <Label style="-fx-text-fill: white;" text="Product List">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <ListView fx:id="productListView" prefHeight="350.0" />
+
+        <HBox spacing="10.0">
+            <children>
+                <Button fx:id="addProductButton" onAction="#handleAddProductButton" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 10;" text="Add New Product" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                
+                <Button fx:id="deleteProductButton" onAction="#handleDeleteProductButton" style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 10;" text="Delete Selected Product" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308"/>
+            </children>
+        </HBox>
+    </children>
+</VBox>
